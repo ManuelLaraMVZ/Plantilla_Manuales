@@ -1,0 +1,85 @@
+\documentclass[twoside]{article} % Note: uses twoside option
+\usepackage[letterpaper, marginparwidth=90 pt, total={12cm, 21
+	cm}]{geometry} % To create a small page
+\usepackage{hyperref} % To use the \url command (in the footnote)
+\usepackage{marginnote}
+
+\usepackage[utf8]{inputenc}
+%Incluir PDF
+\usepackage{pdfpages}
+\usepackage{pgffor}
+\usepackage[spanish]{babel}
+\usepackage{pdflscape} %cambio de horizontal a vertical y visceversa
+%\begin{landscape}
+%	contenidos...
+%\end{landscape}
+
+%Para poner encabezado y pie
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{tgtermes}
+\usepackage{setspace} %doble espacio
+%\doublespacing{}
+%\onehalfspacing
+%\begin{singlespace}
+%\end{singlespace}
+%\setstretch{1.25}
+
+\usepackage{hyperref} %quitar bordes rojos en indice
+\hypersetup{pdfborder=0 0 0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\newpage
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.8pt}
+
+
+\rhead[\textit{Colocar titulo en encabezado derecha}]{}
+\lhead[]{\textit{Colocar titulo en ecabezado izquierda}}
+
+\rfoot[\textit{colocar tu nombre}]{\thepage}
+\lfoot[\thepage]{\textit{Colocar tu nombre}}
+
+\begin{onehalfspace}
+	\setlength{\parindent}{0in}	%quita la sangria en el primer párrafo
+	
+	\newpage
+	
+	\begin{center}
+		\section*{Prácticas de ...}
+	\end{center}
+	\input{Introducción general}
+	
+% con new page se abre una sección nueva con todos los elementos, hay que copiarla
+
+	\newpage
+	\rhead[\textit{Poner título del encabezado}]{\textit{Práctica 1}}
+	\lhead[\textit{Práctica 1}]{\textit{Manual de ....}}
+	\section{Práctica 1: Poner titulo}
+	%Con esto le decimos que tiene que hacer una hoja con ese nombre
+	\input{Práctica 1}
+	
+
+	
+\end{onehalfspace}
+
+\end{document}
+
+	\newpage
+	\rhead[\textit{Universidad Anáhuac México-Norte}]{\textit{Práctica X}}
+	\lhead[\textit{Práctica x}]{\textit{Manual de Metabolómica}}
+	\section{Práctica X: Tútilo}
+	\input{Práctica X}
+	
